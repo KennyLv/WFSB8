@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tab-services {
+    padding-top: 2px;
+    text-align: center;
+}
+.tab-services ul.services-list {
+    margin: 0;
+    padding-top: 27px;
+	list-style-type:none;
+}
+.tab-services .icon-wrapper {
+    padding-bottom: 3.5px;
+    padding-left: 10px;
+}
+/* services */
+.tab-services{
+	width:157px;
+    padding-top: 4px;
+    text-align: center;
+	margin-left:70px;
+}
+.tab-services ul.services-list{
+    padding-top: 27px;
+    margin: 0;
+}
+
+.tab-services .icon-wrapper{
+    padding-left: 10px;
+    padding-bottom: 3.5px;
+}
+.tab-services p.service-description{
+    padding-top: 11.5px;
+    font-size: 12px;
+    line-height: 13px;
+}
+.animation{
+-webkit-animation:fadeOutUp 1s .2s ease both;
+-moz-animation:fadeOutUp 1s .2s ease both;}
+@-webkit-keyframes fadeOutUp{
+0%{opacity:0;
+-webkit-transform:translateY(150px)}
+100%{opacity:1;
+-webkit-transform:translateY(-1px)}
+}
+@-moz-keyframes fadeOutUp{
+0%{opacity:0;
+-moz-transform:translateY(150px)}
+100%{opacity:1;
+-moz-transform:translateY(-1px)}
+}
+
+
+.revolve{
+-webkit-animation:flip 1s .2s ease both;
+-moz-animation:flip 1s .2s ease both;}
+@-webkit-keyframes flip{
+0%{-webkit-transform:perspective(400px) rotateY(0);
+-webkit-animation-timing-function:ease-out}
+40%{-webkit-transform:perspective(400px) translateZ(150px) rotateY(170deg);
+-webkit-animation-timing-function:ease-out}
+50%{-webkit-transform:perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+-webkit-animation-timing-function:ease-in}
+80%{-webkit-transform:perspective(400px) rotateY(360deg) scale(.95);
+-webkit-animation-timing-function:ease-in}
+100%{-webkit-transform:perspective(400px) scale(1);
+-webkit-animation-timing-function:ease-in}
+}
+@-moz-keyframes flip{
+0%{-moz-transform:perspective(400px) rotateY(0);
+-moz-animation-timing-function:ease-out}
+40%{-moz-transform:perspective(400px) translateZ(150px) rotateY(170deg);
+-moz-animation-timing-function:ease-out}
+50%{-moz-transform:perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+-moz-animation-timing-function:ease-in}
+80%{-moz-transform:perspective(400px) rotateY(360deg) scale(.95);
+-moz-animation-timing-function:ease-in}
+100%{-moz-transform:perspective(400px) scale(1);
+-moz-animation-timing-function:ease-in}
+}
+
+
+.swing{
+-webkit-animation:tada 1s .2s ease both;
+-moz-animation:tada 1s .2s ease both;}
+@-webkit-keyframes tada{
+0%{-webkit-transform:scale(1)}
+10%,20%{-webkit-transform:scale(0.9) rotate(-3deg)}
+30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg)}
+40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg)}
+100%{-webkit-transform:scale(1) rotate(0)}
+}
+@-moz-keyframes tada{
+0%{-moz-transform:scale(1)}
+10%,20%{-moz-transform:scale(0.9) rotate(-3deg)}
+30%,50%,70%,90%{-moz-transform:scale(1.1) rotate(3deg)}
+40%,60%,80%{-moz-transform:scale(1.1) rotate(-3deg)}
+100%{-moz-transform:scale(1) rotate(0)}
+}
+
+.rotate_tj{
+-webkit-animation:rotateIn 1s .2s ease both;
+-moz-animation:rotateIn 1s .2s ease both;}
+@-webkit-keyframes rotateIn{
+0%{-webkit-transform-origin:center center;
+-webkit-transform:rotate(-360deg);
+opacity:1}
+100%{-webkit-transform-origin:center center;
+-webkit-transform:rotate(0);
+opacity:1}
+}
+@-moz-keyframes rotateIn{
+0%{-moz-transform-origin:center center;
+-moz-transform:rotate(-360deg);
+opacity:1}
+100%{-moz-transform-origin:center center;
+-moz-transform:rotate(0);
+opacity:1}
+}
+
+
+.rotate_sg{
+-webkit-animation:flash 1s .2s ease both;
+-moz-animation:flash 1s .2s ease both;}
+@-webkit-keyframes flash{
+0%,50%,100%{opacity: 1;}
+25%,75%{opacity: 0;}
+}
+@-moz-keyframes flash{
+0%,50%,100%{opacity: 1;}
+25%,75%{opacity: 0;}
+}

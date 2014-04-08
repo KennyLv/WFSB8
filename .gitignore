@@ -1,9 +1,0 @@
-application/cache/
-application/logs/
-user_guide/
-
-!application/cache/index.html
-!application/cache/.htaccess
-!application/logs/index.html
-!application/logs/.htaccess
-
