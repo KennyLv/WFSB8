@@ -10,7 +10,7 @@
 
 	$("a[href*='.pdf'] ,a[href^='http://']").click(function(){ this.target = "_blank"; });
 
-	if (navigator.platform.indexOf("Win") != -1) {
-		$('head').append('<link rel="stylesheet" href="/common/css/win.css" type="text/css" media="all" />');
-	}
+	//if (navigator.platform.indexOf("Win") != -1) {
+	//	$('head').append('<link rel="stylesheet" href="/common/css/win.css" type="text/css" media="all" />');
+	//}
 });
