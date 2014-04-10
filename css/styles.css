@@ -12,7 +12,7 @@ body{
 	margin:0px;
 	padding:0px;
 	font-size:12px;
-	background-color:#FFF;
+	background-color:#f6f6f6;
 	font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
 	color:#333;
 }
@@ -33,7 +33,12 @@ p{ margin:0px;}
 	clear:both;
 }
 /*******nav********/
-#nav_outter{ border-bottom:1px solid #78BF19; width: 100%; height: 114px;}
+#nav_outter{ 
+	border-bottom:1px solid #78BF19;
+	background-color: #fff;
+	width: 100%; 
+	height: 114px;
+}
 .nav{
 	height: 114px;
     margin: 0 auto;
@@ -400,54 +405,26 @@ cl-effect-12 a:focus {
 	z-index:999;
 	cursor:pointer;
 	height:60px;
-}	
-.xyxs{
-	width:1170px;
-	margin:0px auto;
-	height:199px;
-	text-align:center;
 }
-.xyxs img{
-	margin:57px 0px 35px 0px !important;
-	margin:57px 0px 35px 0px ;
-	width:189px;
-	height:42px;
-}
-.xyxs p{
-	line-height:25px;
-	font-family:Microsoft YaHei;
-	color:#a4a4a4;
-	font-weight:bold;
-	font-size:14px;
-}
+
 .pledge{
-	width:1170px;
 	margin:0px auto;
-	height:326px;
+	height:200px;
 	text-align:center;
 }
-.pledge img {
-	margin-top:97px;
-	width:571px;
-	height:56px;
-}
-#shunfeng{
-	width: 70px;
-	}
 .pledge ul{
-	height: 44px;
+	height: 60px;
+    width: 800px;
     margin: 0 auto;
-    padding-left: 126px;
     padding-top: 20px;
-    width: 567px;
 }
 .pledge ul li{
 	float:left;
-	width:140px;
+	width:200px;
 	text-align:left;
 }
 .pledge ul li span{
-	font-size:36px;
+	font-size:60px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:bold;
 	color:#989898;
@@ -455,30 +432,36 @@ cl-effect-12 a:focus {
 	float:left;
 }
 .pledge ul li p{
-	padding-top:22px;
-	line-height:22px;
+	padding-top:40px;
+	line-height:20px;
 	font-family:Arial, Helvetica, sans-serif;
 	float:left;
 	text-align:right;
-	width:70px;
+	width:100px;
 	color:#d4d4d4;
 	font-weight:bold;
 }
+
+/******footer*******/
+.footer{
+	width:100%;
+	background-color:#f6f6f6;
+	border-top:#71ec3a 1px solid;
+	margin-top:20px;
+}
+
 .contact{
-	height:73px;
-	padding-left:92px;
+	height:80px;
+	width: 1170px;
+	margin: 0px auto;
+	padding-top:30px;
 }
-.phone{
-	float:left;
-	margin:-6px 0px 0px 38px !important;
-	margin:0px 0px 0px 50px ;
-}
+
 .contact li{
-	width:239px !important;
-	width: 250px;
+	width:260px !important;
 	float:left;
 	border-right:#989898 1px solid;
-	height:31px !important;
+	height:60px !important;
 }
 .contact li p{
 	width:130px;
@@ -497,6 +480,11 @@ cl-effect-12 a:focus {
 	font-size:16px;
 	font-family:Microsoft YaHei;
 	
+}
+.phone{
+	float:left;
+	margin:-6px 0px 0px 38px !important;
+	margin:0px 0px 0px 50px ;
 }
 .weixin{
 	float:left;
@@ -524,47 +512,74 @@ cl-effect-12 a:focus {
 	margin:0px 0px 0px 20px ;
 	cursor:pointer;
 }
-/******footer*******/
-.footer{
-	width:100%;
-	background-color:#f6f6f6;
-	height:136px;
-	border-top:#71ec3a 1px solid;
-	margin-top:20px;
+
+.email{
+    margin: -6px 0 0 27px !important;
+    margin: 0 0px 0px 10px;
 }
+#email{ 
+	border-right:none; 
+}
+#email p{ 
+	margin-top:-60px !important;
+}
+
 .foot{
 	width:1170px;
 	margin:0px auto;
-	height:136px;
 }
-.foot a{ text-decoration:none; color:#939393}
-.footer ul{
-	width:223px;
+.foot ul{
 	margin:0px auto;
 	font-size:14px;
 	color:#939393;
 	padding-top:28px;
+	padding-bottom:28px;
 	height:20px;
-
+	width:600px;
 }
-.footer ul li{
+.foot ul li{
 	float:left;
-	width:74px;
+	width:160px;
 	height:22px;
 }
-.beian{
-	padding-top:10px;
-	width:239px;
-	margin:0px auto;
-	background:url(dx_beian_03.jpg) no-repeat bottom left;
-	height:44px;
+.foot ul li a{
+	text-decoration:none; 
+	color:#939393;
+	font-size:20px;
+	text-align: center;
 }
-.footer p{
+.foot .copyright{
+	padding-bottom:20px;
+}
+.foot p{
 	color:#acacac;
-	width:232px;
+	text-align: center;
 	margin:0px auto;
 	padding-top:10px;
 }
+/**404**/
+#main404{ 
+	width:100%;
+	height:400px; 
+	background-color:#f4f2ed; 
+	font-weight:bold;
+	margin-bottom: -20px;
+	padding-top: 40px;
+	
+}
+.main404word {
+	margin: 0px auto;
+	font-size: 40px;
+	color: #888888;
+	width:351px;
+}
+
+.main404img{ 
+	margin:0 auto; 
+	width:351px;
+}
+
+
 /**shop**/
 a{
 	text-decoration:none;
@@ -1550,14 +1565,16 @@ options {background:none; border: #CCC 1px solid; border-radius:5px; }
 	position:fixed;
 	_position:absolute;
 	z-index:1;
-	right:15px;
-	width:84px;
-	height:143px;
+	right:100px;
+    bottom: 60px;
+    _bottom: "auto";
+	width:60px;
+	height:60px;
 	text-indent:-999px;
 	overflow:hidden;
 	z-index: 888;
-	background-image:url(Top_20.png);
-	_background-image:url(Top_20.png);
+	background-image:url(../images/back_to_top4.png);
+	_background-image:url(../images/back_to_top4.png);
 	background-repeat:no-repeat;
 	background-position:0 0;
 	transition:bottom 0.9s;
@@ -1567,8 +1584,6 @@ options {background:none; border: #CCC 1px solid; border-radius:5px; }
 	cursor:pointer;
     line-height: 1.2;
     color: #fff;
-    bottom: 100px;
-    _bottom: "auto";
     cursor: pointer;
 }
 .back_a{
@@ -1994,21 +2009,6 @@ options {background:none; border: #CCC 1px solid; border-radius:5px; }
 .member-address-list {
 	color: #666;
 }
-.email{
-    margin: -6px 0 0 27px !important;
-    margin: 0 0px 0px 10px;
-}
-#email{ border-right:none; width:170px;}
-.dx_online{
-	display: block;
-	width:96px;
-	height: 42px;
-	margin-left: 130px;
-}
-#email p{ width: 170px; margin-top: -43px !important; margin-top: -39px;}
-#mainBbs{ height:600px; background-color:#f4f2ed; font-weight:bold;margin-bottom: -20px;}
-.bbs{ margin:0 auto; width:351px;}
-.bbsword{ margin:0px auto; width:213px; font-size:40px; color:#888888; padding:70px 0;}
 
 .payment-container .msg-success{margin: 10px 0;}
 .payment-container .payment-main{ padding-top:0;}

@@ -9,13 +9,16 @@
 		<meta name="description" content="进凡笔庄,非同凡响!——钟进凡笔庄官方网站">
 		<meta name="copyright" content="ZHONGJINFAN BIZHUANG, INC.">
 		
-		<link href="resource/tab_sevice.css" rel="stylesheet" type="text/css">
-		<link href="resource/daxiang.css" rel="stylesheet" type="text/css">
-		<link href="resource/component.css" rel="stylesheet" type="text/css" >
-		<script src="resource/jquery.min.js"></script>
-		<script src="resource/jquery.fullPage.min.js"></script>
-		<script src="resource/jquery.cookie.js"></script>
-		<script src="resource/jquery-page.js"></script>
+		<script src="js/lib/jquery.min.js" type="text/javascript"></script>
+		<script src="js/lang.js"></script>
+		<link href="css/styles.css" rel="stylesheet" >
+		
+		<script src="js/lib/jquery.fullPage.min.js"></script>
+		<script src="js/lib/jquery.cookie.js"></script>
+		<script src="js/lib/jquery-page.js"></script>
+		
+		
+		<link href="css/fullPage.css" rel="stylesheet" type="text/css">
 		<script>
 			$(document).ready(function() {
 				$.fn.fullpage({
@@ -60,47 +63,46 @@
 	<![endif]-->
 
 	<body id="bigx" style="overflow: hidden; height: 100%;">
-		<div id="superContainer" style="top: 0px;">
-			<div class="box" >
-				<div class="mainlist">
+		<div id="nav_outter">
+			<div class="nav">
+				<nav class="cl-effect-12">
+					<div id="logo">
+						<a href="index.html"></a>
+					</div>
 					<a href="products.html">
-						<div class=" img1 ">
-							<img src="resource/img/canshu_01.jpg">
-						</div>
+						笔庄产品
 					</a>
-					<a href="products.html">
-						<div class="img2 ">
-							<img src="resource/img/canshu_02.jpg" width="1170" height="722">
-						</div>
+					<a href="promotions.html">
+						笔庄活动
 					</a>
-				</div>
+					<a href="vipcenter.html">
+						笔庄会员
+					</a>	
+					<a href="aboutus.html">
+						关于笔庄
+					</a>
+				</nav>
 			</div>
+		</div>
+	
+		<div id="superContainer" style="top: 0px;">
+				<!--<div class="box" >
+					<div class="mainlist">
+						<a href="products.html">
+							<div class=" img1 ">
+								<img src="resource/img/canshu_01.jpg">
+							</div>
+						</a>
+						<a href="products.html">
+							<div class="img2 ">
+								<img src="resource/img/canshu_02.jpg" width="1170" height="722">
+							</div>
+						</a>
+					</div>
+				</div>-->
 			<div class="section table active" data-anchor="page1" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
-					<div id="nav_outter">
-						<div class="nav">
-							<nav class="cl-effect-12">
-								<div id="logo">
-									<a href="index.html"></a>
-								</div>
-								<a href="products.html">
-									笔庄产品
-								</a>
-								<a href="promotions.html">
-									笔庄活动
-								</a>
-								<a href="vipcenter.html">
-									笔庄会员
-								</a>	
-								<a href="aboutus.html">
-									关于笔庄
-								</a>
-								
-								
-							</nav>
 
-						</div>
-					</div>
 					<div class="daxiang_div_20">
 						<div class="daxiang_img_9">
 							<a href="javascript:void(0);" class="showbox">
@@ -128,6 +130,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="dtsj" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_1">
@@ -137,6 +140,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="yzjk" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<img src="resource/img/daxiang_10.jpg" height="100%" class="daxiang_img_3">
@@ -144,6 +148,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="aqrz" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_2">
@@ -153,6 +158,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="bgjz" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_3">
@@ -161,6 +167,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="mfzf" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_4"></div>
@@ -168,6 +175,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="ssyh" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_5">
@@ -177,6 +185,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="qwyr" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_3">
@@ -185,6 +194,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="hwhy" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<img src="resource/img/daxiang_52.jpg" class="daxiang_img_6">
@@ -192,6 +202,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="txdn" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_7"></div>
@@ -199,6 +210,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			
 			<div class="section table" data-anchor="sjdd" style="height: 964px;">
 				<div class="tableCell" style="height:964px;">
 					<div class="daxiang_div_8">
@@ -220,6 +232,7 @@
 			</div>
 
 		</div>
+		
 		<div id="fullPage-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">
 			<ul>
 				<li data-tooltip="">
@@ -279,5 +292,6 @@
 				</li>
 			</ul>
 		</div>
+		
 	</body>
 </html>
