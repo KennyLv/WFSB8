@@ -1,0 +1,302 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+ * fullPage 1.4.5
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.animationa{
+-webkit-animation:rollOut 2s .1s ease both;
+-moz-animation:rollOut 2s .1s ease both;}
+@-webkit-keyframes rollOut{
+0%{opacity:1;
+-webkit-transform:translateX(0px) rotate(0deg)}
+100%{opacity:1;
+-webkit-transform:translateX(-60%) rotate(-120deg)}
+}
+@-moz-keyframes rollOut{
+0%{opacity:1;
+-moz-transform:translateX(0px) rotate(0deg)}
+100%{opacity:1;
+-moz-transform:translateX(-60%) rotate(-120deg)}
+}
+.dx_canshu {
+    background:url(canshu.jpg) no-repeat center bottom #6BFA00;
+    height: 582px;
+    text-align: center;
+    width:1170px ;
+    vertical-align: middle;
+}
+.animation{
+-webkit-animation:rollIn 1s .2s ease both;
+-moz-animation:rollIn 1s .2s ease both;}
+@-webkit-keyframes rollIn{
+0%{opacity:1;
+-webkit-transform:translateX(-60%) rotate(-120deg)}
+100%{opacity:1;
+-webkit-transform:translateX(0px) rotate(0deg)}
+}
+@-moz-keyframes rollIn{
+0%{opacity:1;
+-moz-transform:translateX(-60%) rotate(-120deg)}
+100%{opacity:1;
+-moz-transform:translateX(0px) rotate(0deg)}
+}
+
+
+
+.dx_canshu img {
+    height: 582px;
+    width: 1170px;
+}
+.daxiang_div_21{
+	width:400px;
+	display:block;
+	height:100px;
+}
+.dx_btn{
+	background:url(daxiang_69.jpg);
+	width:244px;
+	height:61px;
+	border:none;
+	cursor:pointer;
+}
+.nav_outter a{
+	margin:56px 0px 0px 63px;
+	}
+#superContainer {
+    height: 100%;
+    position: relative;
+}
+.section {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.slide {
+    float: left;
+}
+.slide, .slidesContainer {
+    height: 100%;
+    display: block;
+}
+.slides {
+    height: 100%;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.section.table, .slide.table {
+    display: table;
+    width: 100%;
+}
+.tableCell {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+}
+.slidesContainer {
+    float: left;
+    position: relative;
+}
+#fullPage-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+}
+#fullPage-nav.right {
+    right: 17px;
+}
+#fullPage-nav.left {
+    left: 17px;
+}
+.fullPage-slidesNav {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.fullPage-slidesNav.bottom {
+    bottom: 17px;
+}
+.fullPage-slidesNav.top {
+    top: 17px;
+}
+#fullPage-nav ul,
+.fullPage-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fullPage-nav li,
+.fullPage-slidesNav li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.fullPage-slidesNav li {
+    display: inline-block;
+}
+#fullPage-nav li a,
+.fullPage-slidesNav li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fullPage-nav li .active span,
+.fullPage-slidesNav .active span {
+    background: #333;
+}
+#fullPage-nav span,
+.fullPage-slidesNav span {
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+.fullPage-tooltip {
+    position: absolute;
+    color: #fff;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    top: -2px;
+}
+.fullPage-tooltip.right {
+    right: 20px;
+}
+.fullPage-tooltip.left {
+    left: 20px;
+}
+.daxiang_img_9{
+	float:left;
+    width: 522px;
+    height: 410px;
+	margin:6% 0 0 0%;;
+}
+.daxiang_div_11{
+	float:left;
+}
+.daxiang_img_19{
+	margin:17% 0 0 16%;
+}
+.daxiang_img_13{
+	display:block;
+	margin:0px 0px 0px 140px;
+}
+.daxiang_div_1{
+	width:1000px;
+	padding-top:11%;
+	margin:0px auto;
+	padding-bottom:11%;
+}
+.daxiang_img_1{
+	margin-left:98px;
+}
+.daxiang_img_2{
+	margin-left:146px;
+}
+.daxiang_img_3{
+	float:left;
+}
+.daxiang_img_4{
+	float:right;
+	margin:200px 7% 0 0;
+}
+.clear{ clear:both;}
+.daxiang_div_2{
+	height:100%;
+	float:left;
+}
+.daxiang_div_2 img{
+	margin:48% 0 0 10%;
+}
+.daxiang_div_3{
+	width:1000px;
+	text-align:center;
+	margin:0px auto;
+}
+.daxiang_div_4{
+	height:100%;
+	float:left;
+	width:514px;
+	background:url(daxiang_36.jpg) no-repeat bottom;
+}
+.daxiang_div_4 img{
+	margin:19% 0 0 0%;
+}
+.daxiang_img_5{
+	float:left;
+	margin:20% 0 0 5%;
+}
+.daxiang_div_5{
+	float:right;
+	height: 100%;
+
+}
+.daxiang_div_6{
+	float:right;
+	background:url(daxiang_55.jpg) bottom  no-repeat;
+	no-repeat;
+	height:100%;
+	width:575px;
+}
+.daxiang_img_6{
+	float:left;
+	margin:1% 0 0 5%;
+}
+.daxiang_div_7{
+	float:left;
+	background:url(daxiang_57.jpg) top  no-repeat;
+	no-repeat;
+	height:100%;
+	width:751px;
+}
+.daxiang_img_7{
+	float:right;
+	margin:200px 7% 0 0;
+}
+.daxiang_div_8{
+	width:1000px;
+	margin:0px auto;
+	text-align:center;
+}
+.daxiang_div_10{
+	width:1000px;
+	margin:0px auto;
+	margin-top:30px;
+	text-align:center;
+}
+.daxiang_div_9{
+	margin:0px;
+	margin-top:35px;
+	text-align:center;
+}
+.daxiang_img_8{
+	margin-top:23px;
+}
+#staticImg{display:block;position:absolute;z-index:1;top:200%;left:0;width:100%;min-width:980px;height:100%;-webkit-transition:all 0.7s ease-out;-moz-transition:all 0.7s ease-out;-o-transition:all 0.7s ease-out;transition:all 0.7s ease-out}
+
+

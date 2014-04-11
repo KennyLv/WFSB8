@@ -10,58 +10,117 @@
 		<meta name="copyright" content="ZHONGJINFAN BIZHUANG, INC.">
 		
 		<script src="js/lib/jquery.min.js" type="text/javascript"></script>
-		<script src="js/lang.js"></script>
+		<script src="js/lib/jquery.cookie.js" type="text/javascript"></script>
+		<script src="js/lib/jquery-kwicks.js" type="text/javascript"></script>
+		<script src="js/lang.js" type="text/javascript"></script>
 		<link href="css/styles.css" rel="stylesheet" >
-		
-		<script src="js/lib/jquery.fullPage.min.js"></script>
-		<script src="js/lib/jquery.cookie.js"></script>
-		<script src="js/lib/jquery-page.js"></script>
+		<link href="css/kwicks.css" rel="stylesheet" >
 		
 		
-		<link href="css/fullPage.css" rel="stylesheet" type="text/css">
+		<script src="js/preloader.js" type="text/javascript"></script>
+		
 		<script>
+			var slideShow = [];
+			slideShow['autoplay'] = true;
+			slideShow['pauseTime'] = 1000;
+			slideShow['number'] = 4;
+			slideShow['max'] = 850;
+			slideShow['duration'] = 800;
+			slideShow['easing'] = 'swing';
+			slideShow['title'] = 'true';
+			slideShow['title_speed'] = 500;
+			slideShow['title_opacity'] = 0.6;
+			slideShow['detail'] = 'true';
+			slideShow['detail_speed'] = 500;
+			slideShow['detail_opacity'] = 0.6;
+		
+		
 			$(document).ready(function() {
-				$.fn.fullpage({
-					anchors : ['page1', 'dtsj', 'yzjk', 'aqrz', 'bgjz', 'mfzf', 'ssyh', 'qwyr', 'hwhy', 'txdn', 'sjdd'],
-					navigation : true
-				});
+		
+				var autoplay = true;
+				var current = 0;
+				var kwicks_items = jQuery('#kwicks li');
+				if (kwicks_items.size() != 0) {
+					jQuery('#kwicks').preloader({
+						delay: 500,
+						beforeShowAll: function () {
+							jQuery(this).kwicks({
+								max: slideShow['max'],
+								duration: slideShow['duration'],
+								easing: slideShow['easing'],
+								spacing: 0
+							});
+							jQuery(".kwick_detail", this).width(slideShow['max']);
+							if (slideShow['title']) {
+								jQuery(".kwick_title", this).fadeTo("fast", slideShow['title_opacity']);
+							}
+
+							jQuery("li", this).append('<div class="kwick_shadow"> </div><div class="kwick_frame_top"></div><div class="kwick_frame"></div>').each(function (i) {
+								jQuery(this).css('z-index', 100 + i);
+							}).hover(function (e, auto) {
+								if (auto != true) {
+									if (slideShow['autoplay']) {
+										kwicks_items.filter('.auto').removeClass('auto').trigger('mouseout');
+										autoplay = false;
+									}
+								}
+								if (slideShow['title']) {
+									jQuery(".kwick_title").stop().fadeTo(slideShow['title_speed'], 0);
+								}
+								if (slideShow['detail']) {
+									jQuery(".kwick_detail", this).stop().fadeTo(slideShow['detail_speed'], slideShow['detail_opacity']);
+								}
+							}, function () {
+								if (slideShow['autoplay']) {
+									autoplay = true;
+								}
+								if (slideShow['title']) {
+									jQuery(".kwick_title").stop().fadeTo(slideShow['title_speed'], slideShow['title_opacity']);
+								}
+								if (slideShow['detail']) {
+									jQuery(".kwick_detail", this).stop().fadeTo(slideShow['detail_speed'], 0);
+								}
+							}).each(function () {
+								if (jQuery(this).children('a').attr('href') != '#') {
+									jQuery(this).css('cursor', 'pointer').click(function () {
+										if (jQuery(this).children('a').attr('target') == '_blank') {
+											window.open(jQuery(this).children('a').attr('href'));
+										} else {
+											location.href = jQuery(this).children('a').attr('href');
+										}
+									});
+								}
+							});
+
+							jQuery("li:last-child", this).append('<div class="kwick_last_frame"></div>');
+						},
+						beforeShow: function () {
+							jQuery(this).closest('li').addClass('preloading');
+						},
+						afterShow: function () {
+							jQuery(this).closest('li').removeClass('preloading');
+						},
+						afterShowAll: function () {
+							if (slideShow['autoplay']) {
+								setInterval(function () {
+									//console.info(autoplay);
+									if (autoplay) {
+										kwicks_items.eq(current - 1).removeClass('auto').trigger('mouseout');
+										kwicks_items.eq(current).addClass('auto').trigger('mouseover', [true]);
+										current++;
+										if (current >= slideShow['number']) {
+											current = 0;
+										}
+									}
+								}, slideShow['pauseTime']);
+							}
+						}
+					});
+				};
 			});
 		</script>
-		<script>
-			function lighton() {
-				document.getElementById('dx_box').className = "animation";
-				document.getElementById('dx_box').style.display = 'inline';
-			}
-
-			function lightoff() {
-				document.getElementById('dx_box').className = "animationa";
-				document.getElementById('dx_box').style.display = '';
-			}
-		</script>
-		<script type="text/javascript">
-			$(function() {
-
-				$(".showbox").click(function() {
-					$("#TB_overlayBG").css({
-						display : "block",
-						height : $(document).height()
-					});
-
-					$(".box").css({
-						top : ($(window).height() - $(".box").height()) / 2 + $(window).scrollTop() + "px",
-						display : "block",
-						position : "fixed"
-					});
-				});
-			})
-		</script>
+		
 	</head>
-
-	<!--[if IE 6]>
-	<script src="themes/dx/images/js/DDPngMin.js"></script>
-	<script>DD_belatedPNG.fix('#img,.btFeed');</script>
-	<![endif]-->
-
 	<body id="bigx" style="overflow: hidden; height: 100%;">
 		<div id="nav_outter">
 			<div class="nav">
@@ -85,213 +144,72 @@
 			</div>
 		</div>
 	
-		<div id="superContainer" style="top: 0px;">
-				<!--<div class="box" >
-					<div class="mainlist">
-						<a href="products.html">
-							<div class=" img1 ">
-								<img src="resource/img/canshu_01.jpg">
-							</div>
-						</a>
-						<a href="products.html">
-							<div class="img2 ">
-								<img src="resource/img/canshu_02.jpg" width="1170" height="722">
-							</div>
-						</a>
-					</div>
-				</div>-->
-			<div class="section table active" data-anchor="page1" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
+		<div class="inner">
+			<ul id="kwicks" class="kwicks-number-4" style="width: 960px; height: 440px; ">
 
-					<div class="daxiang_div_20">
-						<div class="daxiang_img_9">
-							<a href="javascript:void(0);" class="showbox">
-								参数
-							</a>
-							<a href="http://www.edaxiang.com/scene.html" class="showbox1">
-								场景
-							</a>
-							<img src="resource/img/daxia_03cy.png" onload="lighton()" onmouseover="lightoff()" onmouseout="lighton()">
-							<img src="resource/img/banyuan_03.png" id="dx_box" style="position: absolute; margin: 59px 0px 0px -185px; z-index: -99; display: inline;" class="animation">
-						</div>
-						<div class="daxiang_div_11">
-							<img src="resource/img/daxia_06.jpg" class="daxiang_img_19">
-							<div class="daxiang_img_13">
-								<form action="http://www.edaxiang.com/cart-add-goods.html" method="post">
-									<input type="hidden" name="btype">
-									<input type="hidden" name="goods[goods_id]" value="1">
-									<input type="hidden" name="goods[product_id]" value="2">
-									<input type="hidden" name="goods[num]" class="action-quantity-input" value="2" min="2" max="2">
-									<input type="hidden" name="stock" value="9999">
-									<button type="submit" class="dx_btn btn_1" rel="_request"></button>
-								</form>
-							</div>
-						</div>
+				<li style="left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 100; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="http://az-trustee-sales.com/#" target="_self">
+						<img src="images/products_category_1.png" alt="" style="visibility: visible; opacity: 1; ">
+					</a>
+					<div class="kwick_title" style="display: block; opacity: 0.6; ">
+						Great Deals
 					</div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="dtsj" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_1">
-						<img src="resource/img/daxiang_03.jpg" class="daxiang_img_1">
-						<img src="resource/img/daxiang_06.jpg" class="daxiang_img_2">
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="yzjk" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<img src="resource/img/daxiang_10.jpg" height="100%" class="daxiang_img_3">
-					<img src="resource/img/daxiang_13.jpg" class="daxiang_img_4">
-					<div class="clear"></div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="aqrz" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_2">
-						<img src="resource/img/daxiang_21.jpg">
-					</div>
-					<img src="resource/img/daxiang_18.jpg" class="daxiang_img_4">
-					<div class="clear"></div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="bgjz" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_3">
-						<img src="resource/img/daxiang_26.jpg">
-						<img src="resource/img/daxiang_30.jpg" class="daxiang_img_8">
-					</div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="mfzf" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_4"></div>
-					<img src="resource/img/daxiang_34.jpg" class="daxiang_img_4">
-					<div class="clear"></div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="ssyh" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_5">
-						<img src="resource/img/daxiang_41.jpg" width="391" height="100%">
-					</div>
-					<img src="resource/img/daxiang_43.jpg" class="daxiang_img_5">
-					<div class="clear"></div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="qwyr" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_3">
-						<img src="resource/img/daxiang_48.jpg">
-						<img src="resource/img/daxiang_50.jpg">
-					</div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="hwhy" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<img src="resource/img/daxiang_52.jpg" class="daxiang_img_6">
-					<div class="daxiang_div_6"></div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="txdn" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_7"></div>
-					<img src="resource/img/daxiang_60.jpg" class="daxiang_img_7">
-					<div class="clear"></div>
-				</div>
-			</div>
-			
-			<div class="section table" data-anchor="sjdd" style="height: 964px;">
-				<div class="tableCell" style="height:964px;">
-					<div class="daxiang_div_8">
-						<img src="resource/img/daxiang_65.jpg">
-					</div>
-					<div class="daxiang_div_10">
-						<form action="http://www.edaxiang.com/cart-add-goods.html" method="post">
-							<input type="hidden" name="btype">
-							<input type="hidden" name="goods[goods_id]" value="1">
-							<input type="hidden" name="goods[product_id]" value="2">
-							<input type="hidden" name="goods[num]" class="action-quantity-input" value="2" min="2" max="2">
-							<button type="submit" class="dx_btn btn_1" rel="_request"></button>
-						</form>
-					</div>
-					<div class="daxiang_div_9">
-						<img src="resource/img/daxiang_72.jpg">
-					</div>
-				</div>
-			</div>
 
-		</div>
-		
-		<div id="fullPage-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">
-			<ul>
-				<li data-tooltip="">
-					<a href="index.html" class="active">
-						<span></span>
-					</a>
+					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
+						<h3>Great Deals</h3>
+						<p>
+							Purchasing a trustee sale represents one of the best ways for sophisticated investors to acquire real estate equity.
+						</p>
+					</div>
 				</li>
-				<li data-tooltip="">
-					<a href="products.html#dtsj" class="">
-						<span></span>
+
+				<li style="left: 240px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 101; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="http://az-trustee-sales.com/#" target="_self">
+						<img src="images/products_category_2.png" alt="" style="visibility: visible; opacity: 1; ">
 					</a>
+					<div class="kwick_title" style="display: block; opacity: 0.6; ">
+						Quick Sales
+					</div>
+					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
+						<h3>Quick Sales</h3>
+						<p>
+							Win the bid, complete the paperwork, and you will own your property by the end of the next business day.
+						</p>
+					</div>
 				</li>
-				<li data-tooltip="">
-					<a href="products.html#yzjk">
-						<span></span>
+
+				<li style="left: 480px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 102; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="http://az-trustee-sales.com/#" target="_self">
+						<img src="images/products_category_3.png" alt="" style="visibility: visible; opacity: 1; ">
 					</a>
+					<div class="kwick_title" style="display: block; opacity: 0.6; ">
+						Satisfied Customers
+					</div>
+					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
+						<h3> Satisfied Customers </h3>
+						<p>
+							We strive to ensure customer satisfaction; our helpful staff is at your service.
+						</p>
+					</div>
 				</li>
-				<li data-tooltip="">
-					<a href="products.html#aqrz">
-						<span></span>
+
+				<li style="right: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 103; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="http://az-trustee-sales.com/#" target="_self">
+						<img src="images/products_category_4.png" alt="" style="visibility: visible; opacity: 1; ">
 					</a>
-				</li>
-				<li data-tooltip="">
-					<a href="products.html#bgjz">
-						<span></span>
-					</a>
-				</li>
-				<li data-tooltip="">
-					<a href="products.html#mfzf">
-						<span></span>
-					</a>
-				</li>
-				<li data-tooltip="">
-					<a href="products.html#ssyh">
-						<span></span>
-					</a>
-				</li>
-				<li data-tooltip="">
-					<a href="products.html#qwyr">
-						<span></span>
-					</a>
-				</li>
-				<li data-tooltip="">
-					<a href="products.html#hwhy">
-						<span></span>
-					</a>
-				</li>
-				<li data-tooltip="">
-					<a href="products.html#txdn">
-						<span></span>
-					</a>
-				</li>
-				<li data-tooltip="">
-					<a href="products.html#sjdd">
-						<span></span>
-					</a>
+					<div class="kwick_title" style="display: block; opacity: 0.6; "> 
+						Proven Results
+					</div>
+					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
+						<h3> Proven Results</h3>
+						<p>
+							Our team of experts has the know-how and experience to get you the results you deserve.
+						</p>
+					</div>
 				</li>
 			</ul>
 		</div>
+
 		
 	</body>
 </html>
