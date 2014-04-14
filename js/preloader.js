@@ -78,9 +78,9 @@
                             source: image,
                             holder: imageHolder
                         }, showImage);
-                        if ($.browser.opera) {
+                        /*if ($.browser.opera) {
                             image.trigger("load"); //for hidden image
-                        }
+                        }*/
                     }
                 });
             }
