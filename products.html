@@ -22,13 +22,13 @@
 		<script>
 			var slideShow = [];
 			slideShow['autoplay'] = true;
-			slideShow['pauseTime'] = 1000;
-			slideShow['number'] = 4;
+			slideShow['pauseTime'] = 3000;
+			slideShow['number'] = 6;
 			slideShow['max'] = 850;
 			slideShow['duration'] = 800;
 			slideShow['easing'] = 'swing';
 			slideShow['title'] = 'true';
-			slideShow['title_speed'] = 500;
+			slideShow['title_speed'] = 50;
 			slideShow['title_opacity'] = 0.6;
 			slideShow['detail'] = 'true';
 			slideShow['detail_speed'] = 500;
@@ -54,8 +54,9 @@
 							if (slideShow['title']) {
 								jQuery(".kwick_title", this).fadeTo("fast", slideShow['title_opacity']);
 							}
-
-							jQuery("li", this).append('<div class="kwick_shadow"> </div><div class="kwick_frame_top"></div><div class="kwick_frame"></div>').each(function (i) {
+							
+							//jQuery("li", this).append('<div class="kwick_shadow"> </div><div class="kwick_frame_top"></div><div class="kwick_frame"></div>').each(function (i) {
+							jQuery("li", this).each(function (i) {
 								jQuery(this).css('z-index', 100 + i);
 							}).hover(function (e, auto) {
 								if (auto != true) {
@@ -92,7 +93,7 @@
 								}
 							});
 
-							jQuery("li:last-child", this).append('<div class="kwick_last_frame"></div>');
+							//jQuery("li:last-child", this).append('<div class="kwick_last_frame"></div>');
 						},
 						beforeShow: function () {
 							jQuery(this).closest('li').addClass('preloading');
@@ -121,7 +122,7 @@
 		</script>
 		
 	</head>
-	<body id="bigx" style="overflow: hidden; height: 100%;">
+	<body id="products" style="overflow: hidden;">
 		<div id="nav_outter">
 			<div class="nav">
 				<nav class="cl-effect-12">
@@ -147,69 +148,164 @@
 		<div class="inner">
 			<ul id="kwicks" class="kwicks-number-4" style="width: 960px; height: 440px; ">
 
-				<li style="left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 100; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
-					<a href="http://az-trustee-sales.com/#" target="_self">
+				<li style="left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 100; width: 160px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="#" target="_self">
 						<img src="images/products_category_1.png" alt="" style="visibility: visible; opacity: 1; ">
 					</a>
 					<div class="kwick_title" style="display: block; opacity: 0.6; ">
-						Great Deals
+						笔
 					</div>
 
 					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
-						<h3>Great Deals</h3>
+						<h3>笔</h3>
 						<p>
 							Purchasing a trustee sale represents one of the best ways for sophisticated investors to acquire real estate equity.
 						</p>
 					</div>
 				</li>
 
-				<li style="left: 240px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 101; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
-					<a href="http://az-trustee-sales.com/#" target="_self">
+				<li style="left: 160px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 101; width: 160px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="#" target="_self">
 						<img src="images/products_category_2.png" alt="" style="visibility: visible; opacity: 1; ">
 					</a>
 					<div class="kwick_title" style="display: block; opacity: 0.6; ">
-						Quick Sales
+						墨
 					</div>
 					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
-						<h3>Quick Sales</h3>
+						<h3>墨</h3>
 						<p>
 							Win the bid, complete the paperwork, and you will own your property by the end of the next business day.
 						</p>
 					</div>
 				</li>
 
-				<li style="left: 480px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 102; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
-					<a href="http://az-trustee-sales.com/#" target="_self">
+				<li style="left: 320px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 102; width: 160px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="#" target="_self">
 						<img src="images/products_category_3.png" alt="" style="visibility: visible; opacity: 1; ">
 					</a>
 					<div class="kwick_title" style="display: block; opacity: 0.6; ">
-						Satisfied Customers
+						纸
 					</div>
 					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
-						<h3> Satisfied Customers </h3>
+						<h3> 纸 </h3>
 						<p>
 							We strive to ensure customer satisfaction; our helpful staff is at your service.
 						</p>
 					</div>
 				</li>
 
-				<li style="right: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 103; width: 240px; overflow-x: hidden; overflow-y: hidden; " class="">
-					<a href="http://az-trustee-sales.com/#" target="_self">
+				<li style="right: 480px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 103; width: 160px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="#" target="_self">
 						<img src="images/products_category_4.png" alt="" style="visibility: visible; opacity: 1; ">
 					</a>
 					<div class="kwick_title" style="display: block; opacity: 0.6; "> 
-						Proven Results
+						砚
 					</div>
 					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
-						<h3> Proven Results</h3>
+						<h3> 砚</h3>
 						<p>
 							Our team of experts has the know-how and experience to get you the results you deserve.
 						</p>
 					</div>
 				</li>
+				
+				<li style="right: 640px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 104; width: 160px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="#" target="_self">
+						<img src="images/products_category_4.png" alt="" style="visibility: visible; opacity: 1; ">
+					</a>
+					<div class="kwick_title" style="display: block; opacity: 0.6; "> 
+						印
+					</div>
+					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
+						<h3> 印</h3>
+						<p>
+							Our team of experts has the know-how and experience to get you the results you deserve.
+						</p>
+					</div>
+				</li>
+				
+				<li style="left: 800px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; position: absolute; z-index: 105; width: 160px; overflow-x: hidden; overflow-y: hidden; " class="">
+					<a href="#" target="_self">
+						<img src="images/products_category_3.png" alt="" style="visibility: visible; opacity: 1; ">
+					</a>
+					<div class="kwick_title" style="display: block; opacity: 0.6; ">
+						其他
+					</div>
+					<div class="kwick_detail" style="width: 850px; display: block; opacity: 0; ">
+						<h3> 其他 </h3>
+						<p>
+							We strive to ensure customer satisfaction; our helpful staff is at your service.
+						</p>
+					</div>
+				</li>
+				
 			</ul>
 		</div>
-
+		
+		<div style="height:500px;">
+			Contents goes here!
+		</div>
+		
+		
+		<div class="footer">
+		
+			<ul class="contact">
+				<li>
+					<img src="images/contact_phone.png" class="phone">
+					<p>
+						电话<strong>13678077178</strong>
+					</p>
+				</li>
+				<li class="weixinBox">
+					<img src="images/contact_weixin.png" class="weixin">
+					<p>
+						@微信<strong>wfsb8</strong>
+					</p>
+				</li>
+				<li id="weiboBox">
+					<a href="http://weibo.com/wfsb8/" title="官方微博">
+						<img src="images/contact_weibo.png" class="weibo">
+					</a>
+					<p>
+						<a href="http://weibo.com/wfsb8/" title="官方微博" target="_blank">
+							@微博<strong>wfsb8</strong>
+						</a></strong>
+					</p>
+				</li>
+				<li id="email">
+					<img src="images/contact_email.png" class="email">
+					<p>
+						<a href="mailto:wuxinquan1997@163.com">
+							邮件<strong>wuxinquan1997@163.com</strong>
+						</a>
+					</p>
+				</li>
+			</ul>
+		
+			<div class="foot">
+				<ul>
+					<li>
+						<a href="404.html?text=帮助中心">
+							帮助中心
+						</a>
+					</li>
+					<li>
+						<a href="404.html?text=加入">
+							加入
+						</a>
+					</li>
+					<li>
+						<a href="404.html?text=友情链接">
+							友情链接
+						</a>
+					</li>
+				</ul>
+				<div class="copyright">
+					<p>Copyright © 钟进凡笔庄 版权所有，并保留所有权利。</p>
+					<p> © wfsb8.com ICP备案证书号:苏ICP备14008005号</p>
+				</div>
+			</div>
+		</div>
 		
 	</body>
 </html>

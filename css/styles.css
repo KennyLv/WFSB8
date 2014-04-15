@@ -468,6 +468,14 @@ cl-effect-12 a:focus {
 	padding-top:10px;
 }
 
+/**product inner**/
+.inner{
+	width:960px; 
+	margin:0 auto; 
+	position:relative; 
+	height:440px;
+}
+
 /**404**/
 #main404{ 
 	width:100%;

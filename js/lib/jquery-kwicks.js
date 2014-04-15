@@ -96,7 +96,7 @@
                                 if (j != i) {
                                     k.eq(j).css(q, c[j] - ((c[j] - o.min) * b) + 'px')
                                 }
-                                if (j > 0 && j < k.size() - 1) {
+                                if (j > 0 && j <= k.size() - 1) {
                                     k.eq(j).css(r, d[j] - ((d[j] - m[i][j]) * b) + 'px')
                                 }
                             })
