@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+#info_table_title, #history_table_title{
+	width:800px;
+	height:30px;
+	margin-top:25px;
+	margin-bottom:5px;
+}
+#info_table_title{
+	background:#b5cfd2;
+}
+#history_table_title{
+	background:#b5cfd2;
+}
+
+#info_table, #history_table{
+	width:800px;
+	font-family: verdana,arial,sans-serif;
+}
+
+#info_table tr{
+	margin:6px;
+	height:80px;
+}
+
+
+#info_table td{
+	width:15%;
+	background-color:Red;
+	color:Green;
+}
+#info_table td:nth-child(2n){
+	width:85%;
+	background-color:White;
+	color:Black;
+}
+/*
+#info_table td.briefinfo, #history_table  td.briefinfo{
+	width:15%;
+	background-color:Red;
+	color:Green;
+}
+#info_table td.detailinfo , #history_table td.detailinfo {
+	width:85%;
+	background-color:White;
+	color:Black;
+}*/
+
