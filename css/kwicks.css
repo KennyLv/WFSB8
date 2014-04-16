@@ -1,6 +1,8 @@
 /* kwicks Slider
 ---------------------------------------------------------- */
 #kwicks {
+	width: 960px; 
+	height: 340px;
 	list-style:none outside none;
 	margin:0;
 	padding:0;
@@ -11,10 +13,12 @@
 }
 #kwicks li {
 	margin:0;
-	height: 440px;
+	height: 340px;
 	overflow:hidden;
 	float:left;
 	position:relative;
+	width: 160px; 
+	overflow:hidden;
 }
 #kwicks li a {
 	position:absolute;
@@ -27,23 +31,23 @@
 	padding:10px;
 	font-size:16px;
 	color:#fff;
+	background-color: #000;
 	bottom:0px;
 	padding:10px;
-	background-color: #000;
 	width:100%;
-	min-width:220px;
+	min-width:140px;
 	overflow:hidden;
-	display:none;
+	opacity: 0.6;
 }
 #kwicks li .kwick_detail {
 	position:absolute;
 	padding:10px;
-	background-color: #000;
 	color:#fff;
+	background-color: #000;
 	width:100%;
 	bottom:0px;
 	z-index:100;
-	display:none;
+	opacity: 0; 
 }
 #kwicks li .kwick_detail h3 {
 	font-size:24px;
