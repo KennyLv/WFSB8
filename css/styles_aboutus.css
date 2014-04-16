@@ -3,9 +3,12 @@
 
 #info_table_title, #history_table_title{
 	width:800px;
-	height:30px;
+	height:40px;
 	margin-top:25px;
 	margin-bottom:5px;
+	font-family: cursive;
+	font-size: 20px;
+	padding: 6px 0px 0px 20px;
 }
 #info_table_title{
 	background:#b5cfd2;
@@ -16,7 +19,6 @@
 
 #info_table, #history_table{
 	width:800px;
-	font-family: verdana,arial,sans-serif;
 }
 
 #info_table tr{
@@ -27,23 +29,17 @@
 
 #info_table td{
 	width:15%;
-	background-color:Red;
-	color:Green;
+	background-color:#b1f064;
+	color:#ff0000;
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
 }
 #info_table td:nth-child(2n){
 	width:85%;
 	background-color:White;
 	color:Black;
+	text-align: left;
+	padding-left:5px;
+	font-weight: 400;
 }
-/*
-#info_table td.briefinfo, #history_table  td.briefinfo{
-	width:15%;
-	background-color:Red;
-	color:Green;
-}
-#info_table td.detailinfo , #history_table td.detailinfo {
-	width:85%;
-	background-color:White;
-	color:Black;
-}*/
-

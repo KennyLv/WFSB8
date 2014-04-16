@@ -46,7 +46,7 @@
 	background-color: #000;
 	width:100%;
 	bottom:0px;
-	z-index:100;
+	z-index:10;
 	opacity: 0; 
 }
 #kwicks li .kwick_detail h3 {

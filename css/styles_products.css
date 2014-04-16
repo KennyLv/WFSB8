@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/**product inner**/
+.inner{
+	width:960px; 
+	margin:0 auto; 
+	position:relative; 
+	height:440px;
+}

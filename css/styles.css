@@ -13,7 +13,7 @@ body{
 	font-size:12px;
 	background-color:#f6f6f6;
 	/*background-image: url(../images/bg.jpg);*/
-	font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+	font-family: "Microsoft Yahei",sans-serif,arial,"Hiragino Sans GB";
 	color:#333;
 }
 a:focus {
@@ -34,29 +34,28 @@ p{ margin:0px;}
 }
 /*******header********/
 #nav_outter{ 
-	border-bottom:1px solid #78BF19;
-	background-color: #fff;
 	width: 100%; 
-	height: 114px;
+	height: 86px;
+	border-bottom:1px solid #78BF19;
+	background-color: #ffffff;
+	-webkit-box-shadow: 10px 5px 10px #000000;
+	-moz-box-shadow: 10px 5px 10px #000000;
 }
 .nav{
-	height: 114px;
+	height: 86px;
     margin: 0 auto;
-    width: 1170px;
+    width: 1024px;
 }
-.container > section {
-    padding: 10em 3em;
-    text-align: center;
-}
+
 .cl-effect-12{
-    height: 114px;
+    height: 86px;
     float: left;
 }
 #logo{
 	background:url(../images/logo.png) no-repeat;
-	background-position:right bottom;
+	background-position:left;
 	width:460px;
-	height:97px;
+	height:86px;
 	float:left;
 }
 #logo a{
@@ -66,7 +65,7 @@ p{ margin:0px;}
 	text-decoration: none;
 	padding:0px;
 	width:460px;
-	height:97px;
+	height:86px;
 
 }
 #logo a::before,
@@ -97,7 +96,7 @@ p{ margin:0px;}
 	padding:0px;
 	float:left;
 	margin:44px 0px 0px 63px;
-
+	z-index:30;
 }
 
 cl-effect-12 a:hover,
@@ -194,8 +193,8 @@ cl-effect-12 a:focus {
 	
 /******body*********/
 .main_body{
-	width:980px;
-	margin:0 auto;
+	width:1024px;
+	margin:10px auto;
 }
 	
 /******footer*******/
@@ -207,14 +206,14 @@ cl-effect-12 a:focus {
 }
 
 .contact{
-	width: 1170px;
+	width: 1024px;
 	height:80px;
 	margin: 0px auto;
 	padding-top:30px;
 }
 
 .contact li{
-	width:260px !important;
+	width:250px !important;
 	float:left;
 	border-right:#989898 1px solid;
 	height:60px !important;
@@ -322,25 +321,12 @@ cl-effect-12 a:focus {
 	height:440px;
 }
 
-/**404**/
-#main404{ 
-	width:100%;
-	height:400px; 
-	background-color:#f4f2ed; 
-	font-weight:bold;
-	margin-bottom: -20px;
-	padding-top: 40px;
-	
+.backToTop{
+	width: 60px;
+	height: 60px;
+	position:fixed;
+	right:30px;
+	bottom:30px;
+	cursor:pointer;
+	background-image:url('../images/back_to_top4.png');
 }
-.main404word {
-	margin: 0px auto;
-	font-size: 40px;
-	color: #888888;
-	width:351px;
-}
-
-.main404img{ 
-	margin:0 auto; 
-	width:351px;
-}
-

@@ -102,18 +102,18 @@
 
 /********main begin************/
 .main{
-	width:1170px;
+	width: 1024px;
 	margin:0px auto;
 }
 .module{
-	width:1170px;
+	width: 1024px;
 	height:300px;
 	margin:0xp auto;
 	padding-top:60px;
 	background-color:#3300ff;
 }
 .module_left, .module_right{
-	width:585px;
+	width:512px;
 	height:300px;
 	float:left;
 	display:inline;
