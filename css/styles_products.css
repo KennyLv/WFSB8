@@ -10,3 +10,138 @@
 	height:440px;
 	margin-top:10px; 
 }
+.search-bar{
+	width:1024px; 
+	margin: 30px 0px 10px 0px; 
+	position:relative; 
+	height:30px;
+	background-color: #000fff;
+}
+.search-form{
+	
+}
+.search-word{
+
+}
+.search-btn{
+
+}
+
+.poduct-list-panel {
+	position: relative;
+	width: 960px;
+	height: auto;
+	margin:0 auto; 
+	margin-top:10px; 
+}
+
+.channel-item {
+position: relative;
+width: 181px;
+height: 195px;
+margin: 0 0 20px 25px;
+float: right;
+}
+
+.channel-img {
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 136px;
+}
+.channel-img {
+-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+}
+
+.channel-item .channel-link {
+display: block;
+}
+a {
+text-decoration: none;
+font-size: 12px;
+cursor: pointer;
+}
+user agent stylesheeta:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
+}
+
+.channel-img img {
+z-index: 10;
+display: block;
+width: 181px;
+height: 136px;
+}
+.channel-info {
+position: relative;
+width: 100%;
+height: 37px;
+}
+
+.channel-info .channel-name {
+margin-top: 7px;
+width: 100%;
+height: 30px;
+font-family: Microsoft YaHei,"Î¢ÈíÑÅºÚ";
+line-height: 30px;
+}
+.channel-info .channel-name {
+display: block;
+color: #1c90e2;
+text-align: center;
+font-size: 11pt;
+}
+
+
+.channel-info .channel-name span {
+display: inline-block;
+overflow: hidden;
+max-width: 158px;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.channel-info .online-num {
+height: 11px;
+vertical-align: bottom;
+font-size: 13px;
+line-height: 11px;
+}
+.channel-info .online-num {
+display: block;
+margin-top: 5px;
+width: auto;
+color: #bfbfbf;
+text-align: center;
+}
+.channel-info .online-num-icon {
+position: relative;
+top: 1px;
+display: inline-block;
+width: 11px;
+height: 11px;
+background-position: 0 -32px;
+zoom: 1;
+_display: inline;
+}
+.original-banner {
+position: absolute;
+top: -2px;
+right: -2px;
+z-index: 10;
+width: 40px;
+height: 40px;
+background-position: -625px 0;
+}
+
+
+
+
+
+
+
+

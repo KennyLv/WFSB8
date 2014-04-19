@@ -198,7 +198,7 @@ cl-effect-12 a:focus {
 /******body*********/
 .main_body{
 	width:1024px;
-	height:1024px;
+	min-height:800px;
 	margin:110px auto;
 }
 	
