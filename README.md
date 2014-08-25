@@ -15,3 +15,17 @@ TODO
 ####4，添加在线支付接口和订单管理系统
 
 ####5，完善推广帐号设立与关联
+
+
+
+--------------------
+
+Refer:
+
+--------------------
+推荐：
+http://www.indianrunnerdrinks.com/
+
+
+http://www.css3-html5.com/Design/20100416388.html
+http://www.freshdesignweb.com/free-business-website-templates.html
